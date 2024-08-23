@@ -1,0 +1,28 @@
+#Container{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+}
+#Calculadora{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px; 
+    padding: 20px;
+}
+#Actions{
+    padding-top: 10px;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+input{
+    height: 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+h1{
+    margin: 14px;
+}

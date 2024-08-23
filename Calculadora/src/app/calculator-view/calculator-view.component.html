@@ -1,13 +1,15 @@
-<p>calculator-view works!</p>
-<div style="display: flex; align-items: center; justify-content: center; border: 1px; border-style:solid; border-radius: 5px; padding: 0.5cm; padding-bottom: 45px;">
-    <div style="display: block;">
+<div id="Container">
+    <div id="Calculadora">
         <h1>Calculadora</h1>
-        <div style="display: block;">
-            <h5>Valor 1</h5>
-            <input type="text">
+        <h5>Valor 1</h5>
+        <input [value]="resultado ? valor1:'' " type="text" id="valor1" (input)="cargarValor1($event)">
+        <h5>Valor 2</h5>
+        <input [value]="resultado ? valor2:'' " type="text" id="valor2" (input)="cargarValor2($event)">
+        <h5>Resultado</h5>
+        <input type="text" id="resultado" disabled [value]="resultado">
+        <div id="Actions">
+        <app-calc-maths [valor1]="valor1" [valor2]="valor2" (resultado)="calcular($event)" (limpiarCampos)="limpiar()"></app-calc-maths>    
         </div>
     </div>
-    
 </div>
 
-<app-calc-maths></app-calc-maths>
